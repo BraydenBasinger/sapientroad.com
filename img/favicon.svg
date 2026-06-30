@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Navy background with rounded corners -->
+  <rect width="32" height="32" rx="5" fill="#1a2744"/>
+  <!-- Gold mountain / road-perspective mark -->
+  <polygon points="16,5 29,27 3,27" fill="#E8940A"/>
+  <!-- Darker inner facet for depth -->
+  <polygon points="16,5 22,27 16,27" fill="#C97A08"/>
+</svg>

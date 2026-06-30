@@ -538,6 +538,140 @@ button     { font-family: inherit; cursor: pointer; }
 
 
 /* ============================================================
+   IN THE PRESS
+   ============================================================ */
+.press-publisher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: -20px auto 44px;
+    color: var(--text-medium);
+    font-size: 14px;
+}
+.press-publisher svg {
+    width: 20px;
+    height: 20px;
+    color: var(--teal);
+    flex-shrink: 0;
+}
+.press-publisher strong {
+    color: var(--navy);
+}
+
+.press-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.press-card {
+    display: block;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.35s var(--ease-spring),
+                box-shadow 0.35s ease,
+                border-color 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    background: var(--white);
+}
+.press-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(77, 184, 184, 0.4);
+}
+
+/* Gold accent bar on top */
+.press-card::before {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-dark) 100%);
+    transition: height 0.3s ease;
+}
+.press-card:hover::before {
+    height: 6px;
+}
+
+.press-card-inner {
+    padding: 28px 30px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.press-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.press-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+}
+
+.press-badge {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    background: rgba(77, 184, 184, 0.1);
+    border: 1px solid rgba(77, 184, 184, 0.25);
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.press-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.35;
+    transition: color 0.25s ease;
+}
+.press-card:hover .press-title {
+    color: var(--teal-dark);
+}
+
+.press-excerpt {
+    font-size: 14px;
+    color: var(--text-medium);
+    line-height: 1.85;
+    flex: 1;
+}
+
+.press-read {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-top: 4px;
+    transition: gap 0.25s ease, color 0.25s ease;
+}
+.press-card:hover .press-read {
+    gap: 10px;
+    color: var(--teal-dark);
+}
+
+@media (max-width: 640px) {
+    .press-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
    SERVICES — WHAT WE DO
    ============================================================ */
 .services-grid {
