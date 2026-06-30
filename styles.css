@@ -9,10 +9,10 @@
     --navy:          #1a2744;
     --navy-dark:     #111c33;
     --navy-light:    #243158;
-    --teal:          #4DB8B8;
-    --teal-dark:     #39a3a3;
-    --teal-light:    #6ECECE;
-    --teal-glow:     rgba(77, 184, 184, 0.35);
+    --teal:          #E8940A;
+    --teal-dark:     #C97A08;
+    --teal-light:    #F0A830;
+    --teal-glow:     rgba(232, 148, 10, 0.28);
     --gold:          #E8940A;
     --gold-dark:     #C97A08;
     --white:         #ffffff;
@@ -41,8 +41,8 @@
     --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
     --transition:    all 0.3s var(--ease-out);
 
-    --font-body:     'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-display:  'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body:     system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-display:  'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
 }
 
 /* ---- Reset & Base ------------------------------------------ */
@@ -79,7 +79,7 @@ button     { font-family: inherit; cursor: pointer; }
     padding: 0 28px;
 }
 
-.section        { padding: 96px 0; }
+.section        { padding: 60px 0; }
 .section-white  { background: var(--white); }
 .section-gray   { background: var(--gray-100); }
 
@@ -155,7 +155,7 @@ button     { font-family: inherit; cursor: pointer; }
     width: 56px;
     height: 3px;
     background: var(--teal);
-    margin: 16px auto 0;
+    margin: 10px auto 0;
     border-radius: 2px;
 }
 
@@ -164,7 +164,7 @@ button     { font-family: inherit; cursor: pointer; }
     color: var(--text-medium);
     font-size: 16px;
     max-width: 680px;
-    margin: 0 auto 52px;
+    margin: 0 auto 36px;
     line-height: 1.85;
 }
 
@@ -229,8 +229,8 @@ button     { font-family: inherit; cursor: pointer; }
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     gap: 16px;
 }
 
@@ -295,17 +295,6 @@ button     { font-family: inherit; cursor: pointer; }
 
 .nav-btn { margin-left: 10px; }
 
-.search-btn {
-    background: none;
-    border: none;
-    padding: 6px;
-    color: var(--text-medium);
-    transition: color 0.25s ease;
-    margin-left: 4px;
-    border-radius: var(--radius-sm);
-}
-.search-btn svg { width: 18px; height: 18px; }
-.search-btn:hover { color: var(--teal); }
 
 /* Mobile nav drawer */
 .mobile-nav {
@@ -339,14 +328,14 @@ button     { font-family: inherit; cursor: pointer; }
    ============================================================ */
 .hero {
     position: relative;
-    min-height: 540px;
+    min-height: 460px;
     display: flex;
     align-items: center;
     overflow: hidden;
     background-color: #0c1424;
     background-image:
-        /* subtle teal radial glow top-right */
-        radial-gradient(ellipse 60% 60% at 78% 30%, rgba(77,184,184,.09) 0%, transparent 70%),
+        /* subtle warm glow top-right */
+        radial-gradient(ellipse 60% 60% at 78% 30%, rgba(232,148,10,.06) 0%, transparent 70%),
         /* main dark gradient */
         linear-gradient(155deg, rgba(10,14,26,.98) 0%, rgba(18,28,58,.9) 55%, rgba(8,12,22,.97) 100%);
 }
@@ -371,7 +360,7 @@ button     { font-family: inherit; cursor: pointer; }
 .hero-glow-1 {
     width: 500px; height: 500px;
     top: -120px; right: -60px;
-    background: radial-gradient(circle, rgba(77,184,184,.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(232,148,10,.08) 0%, transparent 70%);
 }
 .hero-glow-2 {
     width: 380px; height: 380px;
@@ -382,8 +371,8 @@ button     { font-family: inherit; cursor: pointer; }
 .hero-content {
     position: relative;
     z-index: 1;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 54px;
+    padding-bottom: 54px;
 }
 
 .hero-eyebrow {
@@ -411,7 +400,7 @@ button     { font-family: inherit; cursor: pointer; }
     font-size: clamp(16px, 2.5vw, 20px);
     font-weight: 300;
     color: rgba(255,255,255,.78);
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     letter-spacing: 0.4px;
     max-width: 500px;
 }
@@ -455,7 +444,7 @@ button     { font-family: inherit; cursor: pointer; }
    ============================================================ */
 .quote-section {
     background: var(--gray-100);
-    padding: 76px 0;
+    padding: 48px 0;
     text-align: center;
 }
 .quote-section blockquote p {
@@ -481,7 +470,7 @@ button     { font-family: inherit; cursor: pointer; }
    ============================================================ */
 .about-section {
     background: var(--white);
-    padding: 64px 0;
+    padding: 44px 0;
 }
 .about-text {
     max-width: 920px;
@@ -499,9 +488,9 @@ button     { font-family: inherit; cursor: pointer; }
 .who-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 64px;
+    gap: 44px;
     align-items: center;
-    margin-top: 52px;
+    margin-top: 36px;
 }
 
 .who-photo { position: relative; }
@@ -545,7 +534,7 @@ button     { font-family: inherit; cursor: pointer; }
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin: -20px auto 44px;
+    margin: -8px auto 28px;
     color: var(--text-medium);
     font-size: 14px;
 }
@@ -562,7 +551,7 @@ button     { font-family: inherit; cursor: pointer; }
 .press-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
+    gap: 20px;
 }
 
 .press-card {
@@ -581,7 +570,7 @@ button     { font-family: inherit; cursor: pointer; }
 .press-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
-    border-color: rgba(77, 184, 184, 0.4);
+    border-color: rgba(232, 148, 10, 0.4);
 }
 
 /* Gold accent bar on top */
@@ -597,7 +586,7 @@ button     { font-family: inherit; cursor: pointer; }
 }
 
 .press-card-inner {
-    padding: 28px 30px 26px;
+    padding: 20px 24px 18px;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -623,8 +612,8 @@ button     { font-family: inherit; cursor: pointer; }
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--teal-dark);
-    background: rgba(77, 184, 184, 0.1);
-    border: 1px solid rgba(77, 184, 184, 0.25);
+    background: rgba(232, 148, 10, 0.1);
+    border: 1px solid rgba(232, 148, 10, 0.25);
     padding: 3px 10px;
     border-radius: 20px;
 }
@@ -677,14 +666,14 @@ button     { font-family: inherit; cursor: pointer; }
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 20px;
 }
 
 .service-card {
     background: var(--white);
     border: 1px solid var(--gray-200);
     border-radius: var(--radius-md);
-    padding: 38px 28px 34px;
+    padding: 26px 22px 22px;
     text-align: center;
     box-shadow: var(--shadow-card);
     transition: transform 0.35s var(--ease-spring),
@@ -694,13 +683,13 @@ button     { font-family: inherit; cursor: pointer; }
 .service-card:hover {
     transform: translateY(-9px);
     box-shadow: var(--shadow-hover);
-    border-color: rgba(77,184,184,.35);
+    border-color: rgba(232,148,10,.35);
 }
 
 .service-icon {
-    width: 58px;
-    height: 58px;
-    margin: 0 auto 22px;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
     color: var(--teal);
     transition: transform 0.3s var(--ease-spring);
 }
@@ -728,13 +717,13 @@ button     { font-family: inherit; cursor: pointer; }
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 16px;
 }
 
 .step-card {
     background: var(--white);
     border-radius: var(--radius-md);
-    padding: 38px 22px 34px;
+    padding: 26px 20px 22px;
     text-align: center;
     box-shadow: var(--shadow-card);
     transition: transform 0.35s var(--ease-spring),
@@ -761,11 +750,11 @@ button     { font-family: inherit; cursor: pointer; }
 
 .step-number {
     font-family: var(--font-display);
-    font-size: 50px;
+    font-size: 42px;
     font-weight: 700;
     color: var(--teal);
     line-height: 1;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     opacity: 0.75;
     transition: opacity 0.3s ease;
 }
@@ -790,7 +779,7 @@ button     { font-family: inherit; cursor: pointer; }
    TRUST STRIP
    ============================================================ */
 .trust-strip {
-    padding: 40px 0;
+    padding: 26px 0;
     background: var(--white);
     border-top: 1px solid var(--gray-200);
     border-bottom: 1px solid var(--gray-200);
@@ -810,7 +799,7 @@ button     { font-family: inherit; cursor: pointer; }
     font-size: 13.5px;
     font-weight: 600;
     letter-spacing: 0.4px;
-    padding: 12px 36px;
+    padding: 10px 28px;
     transition: color 0.25s ease;
 }
 .trust-item:hover { color: var(--teal); }
@@ -840,14 +829,14 @@ button     { font-family: inherit; cursor: pointer; }
     display: inline-block;
     margin-top: 6px;
     padding: 7px 16px;
-    background: rgba(77, 184, 184, 0.10);
+    background: rgba(232, 148, 10, 0.10);
     color: var(--teal-dark);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     border-radius: var(--radius-sm);
-    border: 1.5px solid rgba(77, 184, 184, 0.35);
+    border: 1.5px solid rgba(232, 148, 10, 0.35);
     cursor: pointer;
     transition: background 0.25s ease,
                 color 0.25s ease,
@@ -904,7 +893,7 @@ button     { font-family: inherit; cursor: pointer; }
    DISCLOSURE
    ============================================================ */
 .disclosure-container { max-width: 820px; }
-.disclosure-content   { margin-top: 44px; }
+.disclosure-content   { margin-top: 32px; }
 .disclosure-content p {
     font-size: 15px;
     color: var(--text-medium);
@@ -923,7 +912,7 @@ button     { font-family: inherit; cursor: pointer; }
    ============================================================ */
 .faq-list {
     max-width: 800px;
-    margin: 44px auto 0;
+    margin: 32px auto 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -939,11 +928,11 @@ button     { font-family: inherit; cursor: pointer; }
 }
 .faq-item:hover {
     box-shadow: var(--shadow-sm);
-    border-color: rgba(77,184,184,.3);
+    border-color: rgba(232,148,10,.3);
 }
 .faq-item[open] {
-    border-color: rgba(77,184,184,.4);
-    box-shadow: 0 4px 18px rgba(77,184,184,.12);
+    border-color: rgba(232,148,10,.4);
+    box-shadow: 0 4px 18px rgba(232,148,10,.12);
 }
 
 .faq-item summary {
@@ -964,7 +953,7 @@ button     { font-family: inherit; cursor: pointer; }
 .faq-item summary:hover { color: var(--teal); }
 .faq-item[open] summary {
     color: var(--teal);
-    background: rgba(77,184,184,.06);
+    background: rgba(232,148,10,.06);
     border-bottom: 1px solid var(--gray-200);
 }
 
@@ -998,15 +987,15 @@ button     { font-family: inherit; cursor: pointer; }
 .contact-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin-top: 52px;
+    gap: 16px;
+    margin-top: 36px;
 }
 
 .contact-card {
     background: var(--white);
     border: 1px solid var(--gray-200);
     border-radius: var(--radius-md);
-    padding: 32px 24px 28px;
+    padding: 22px 18px 20px;
     text-align: center;
     box-shadow: var(--shadow-card);
     display: flex;
@@ -1020,13 +1009,13 @@ button     { font-family: inherit; cursor: pointer; }
 .contact-card:hover {
     transform: translateY(-7px);
     box-shadow: var(--shadow-hover);
-    border-color: rgba(77,184,184,.35);
+    border-color: rgba(232,148,10,.35);
 }
 
 .contact-icon {
     width: 48px;
     height: 48px;
-    background: rgba(77,184,184,.1);
+    background: rgba(232,148,10,.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1071,7 +1060,7 @@ button     { font-family: inherit; cursor: pointer; }
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
-    padding: 64px 0 48px;
+    padding: 44px 0 32px;
     border-bottom: 1px solid rgba(255,255,255,.08);
     flex-wrap: wrap;
 }
@@ -1128,7 +1117,7 @@ button     { font-family: inherit; cursor: pointer; }
 }
 
 .footer-bottom {
-    padding: 28px 0;
+    padding: 18px 0;
     text-align: center;
     display: flex;
     flex-direction: column;
